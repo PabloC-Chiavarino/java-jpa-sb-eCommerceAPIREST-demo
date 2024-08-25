@@ -7,6 +7,7 @@ import com.pdev.ecdemo.service.OrderService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -17,6 +18,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping(path = "/api/v1/orders")
+@Tag(name = "Orden / Order", description = "Operaciones específicas para ordenes / Specific operations for orders")
 public class OrderController extends _GenericController<Order, OrderDTO> {
 
     OrderService orderService;

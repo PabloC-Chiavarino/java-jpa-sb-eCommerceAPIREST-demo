@@ -6,6 +6,7 @@ import com.pdev.ecdemo.service.ProductService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,6 +18,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping(path = "/api/v1/products")
+@Tag(name = "Producto / Product", description = "Operaciones específicas para productos / Specific operations for products")
 public class ProductController extends _GenericController<Product, ProductDTO> {
 
     private final ProductService productService;

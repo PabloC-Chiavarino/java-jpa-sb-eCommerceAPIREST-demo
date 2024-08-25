@@ -6,6 +6,7 @@ import com.pdev.ecdemo.service.ClientService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -14,6 +15,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping(path = "/api/v1/clients")
+@Tag(name = "Cliente / Client", description = "Operaciones específicas para clientes / Specific operations for clients")
 public class ClientController extends _GenericController<Client, ClientDTO> {
 
     private final ClientService clientService;
@@ -40,7 +42,7 @@ public class ClientController extends _GenericController<Client, ClientDTO> {
     }
 
     @Operation(
-            summary = "Obtener un cliente por número de documento / Get a client by document number",
+            summary = "Obtener un cliente por número de documento o pasaporte / Get a client by document or passport number",
             description = "Recupera un cliente por su número de documento. / Retrieves a client by their document number."
     )
     @ApiResponses(value = {
