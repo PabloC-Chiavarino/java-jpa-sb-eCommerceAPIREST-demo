@@ -47,7 +47,7 @@ public class OrderService extends _GenericService<Order, OrderDTO> {
             return Optional.empty();
         }
 
-        Optional<Order> order = dataProvider.getOrder(client.get().getOrders().getLast().getId());
+        Optional<Order> order = dataProvider.getOrder(client.get().getOrders().get(client.get().getOrders().size() - 1).getId());
 
         if (!order.isPresent()) {
             System.out.println(notFound);
@@ -72,7 +72,7 @@ public class OrderService extends _GenericService<Order, OrderDTO> {
             return Optional.empty();
         }
 
-        Optional<Order> order = dataProvider.getOrder(client.get().getOrders().getLast().getId());
+        Optional<Order> order = dataProvider.getOrder(client.get().getOrders().get(client.get().getOrders().size() - 1).getId());
 
         if (!order.isPresent()) {
             System.out.println(notFound);
@@ -213,7 +213,7 @@ public class OrderService extends _GenericService<Order, OrderDTO> {
             return Optional.empty();
         }
 
-        Optional<Order> order = dataProvider.getOrder(client.get().getOrders().getLast().getId());
+        Optional<Order> order = dataProvider.getOrder(client.get().getOrders().get(client.get().getOrders().size() - 1).getId());
 
         if (!order.isPresent() || !order.get().getOpen()) {
             System.out.println("Order not found or closed.");

@@ -52,7 +52,7 @@ public class InvoiceService extends _GenericService<Invoice, InvoiceDTO> {
 
         System.out.println("Client found.");
 
-        Optional<Order> order = dataProvider.getOrder(client.get().getOrders().getLast().getId());
+        Optional<Order> order = dataProvider.getOrder(client.get().getOrders().get(client.get().getOrders().size() - 1).getId());
 
         if (!order.isPresent()) {
             System.out.println("Order not found.");
