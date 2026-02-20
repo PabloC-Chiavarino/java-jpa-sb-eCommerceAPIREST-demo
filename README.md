@@ -63,8 +63,4 @@
 | Español                                                                                                                            | English                                                                                                       |
 |------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|
 | Para obtener especificaciones detalladas y acceder a la documentación interactiva de la API, por favor visita el siguiente enlace: | For detailed specifications and to access the interactive API documentation, please visit the following link: |
-| [Documentación de Swagger](http://localhost:8080/swagger-ui/index.html)                                                            | [Swagger Documentation](http://localhost:8080/swagger-ui/index.html)                                          |
-
-**Nota**: Este enlace funciona en su puerto local (8080) una vez que la API está desplegada en su ordenador.
-
-**Note**: This link works on your local port (8080) once the API is deployed on your machine.
+| [Documentación de Swagger](https://java-jpa-sb-ecommerceapirest-demo.onrender.com/swagger-ui/index.html)                                                            | [Swagger Documentation](https://java-jpa-sb-ecommerceapirest-demo.onrender.com/swagger-ui/index.html)                                          |
