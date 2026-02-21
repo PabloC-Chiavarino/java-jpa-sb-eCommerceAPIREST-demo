@@ -19,7 +19,7 @@ public class Order {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(columnDefinition = "TINYINT(1)")
+    @Column
     private Boolean open;
 
     @OneToOne(mappedBy = "order", cascade = CascadeType.ALL)

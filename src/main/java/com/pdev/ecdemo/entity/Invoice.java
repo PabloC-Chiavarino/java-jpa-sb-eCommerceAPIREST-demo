@@ -50,13 +50,13 @@ public class Invoice {
     @Setter
     public static class InvoiceDetail {
 
-        @Column(name = "description", columnDefinition = "CHAR(50)")
+        @Column(name = "description", length = 50)
         private String description;
 
-        @Column(name = "amount", columnDefinition = "INTEGER")
+        @Column(name = "amount")
         private Integer amount;
 
-        @Column(name = "price", columnDefinition = "DOUBLE")
+        @Column(name = "price")
         private Double price;
 
         public InvoiceDetail() {
